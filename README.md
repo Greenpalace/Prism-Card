@@ -5,7 +5,9 @@
 이를 위해 kospeech, KoNLPy, KeyBERT를 기반으로 작업하였습니다.
 
 kospeech : [한국어 기반 STT 모델](https://github.com/sooftware/kospeech/)
+
 KoNLPy : [한국어 정보처리를 위한 NLP 모델](https://konlpy-ko.readthedocs.io/ko/v0.4.3/)
+
 KeyBERT : [자연어 키워드 추출 모델](https://github.com/MaartenGr/KeyBERT)
 
 # 설치
