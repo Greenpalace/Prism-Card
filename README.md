@@ -10,6 +10,12 @@ KoNLPy : [한국어 정보처리를 위한 NLP 모델](https://konlpy-ko.readthe
 
 KeyBERT : [자연어 키워드 추출 모델](https://github.com/MaartenGr/KeyBERT)
 
+해당 패키지를 통한 학습을 위해 다음과 같은 데이터를 사용하였습니다.
+
+KorQuAD : [한국어 데이터셋](https://korquad.github.io/KorQuad%201.0/)
+
+AIhub : [한국어 아동 음성 데이터셋](https://www.aihub.or.kr/aihubdata/data/view.do?currMenu=115&topMenu=100&aihubDataSe=realm&dataSetSn=540)
+
 # 설치
 
 해당 웹서비스의 구동을 위해 다음과 같은 패키지가 사용되었습니다.
