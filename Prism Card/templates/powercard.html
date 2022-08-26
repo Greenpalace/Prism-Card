@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="static/powercard.css">
+    <script>
+    $(document).ready(function(){
+        $('h3').click(function(){
+            $(this).hide()
+        })
+    })
+    </script>
+    <style>
+        .imagewrap{height: 100%;}
+    </style>
+</head>
+<body>
+<form action="/quiz" method="post">
+    <input type="hidden" name="situation" value={{ datas[0] }}>
+    <input type="hidden" name="script" value={{ datas[1] }}>
+
+    <div class="wrap">
+        <div class="powercard">
+            <img class="imagewrap" src="static/samplechar.jpg" alt="Sample Image">
+            <div class="scriptwrap">
+                <h3>1 화장실에서 나오기 전에는 손을 씻는다.</h3>
+                <br>
+                <h3>2 손을 씻을 때 비누를 사용한다</h3>
+                <br>
+                <h3>3 손을 씻고 물기를 완전히 말린다</h3>
+                <br>
+            </div>
+        </div>
+        <div class="wrap2">
+            <button class="buttonback" type="button" onclick="window.location.href='/modify'">수정하기</button>
+            <button class="buttonquiz" type="submit">퀴즈풀기</button>
+        </div>
+    </div>
+</form>
+
+</body>
+</html>

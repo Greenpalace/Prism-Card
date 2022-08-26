@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/53a8c415f1.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="static/quiz.css">
+    <style>
+        .imgsmall {height:80px;}
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div class="wrap2">
+            <div class="title">맞혀볼까요?</div>
+            <div class="dialog">토토가 사용하는 것은?</div>
+        </div>
+        <button class="btn1" type="button">
+            <img class="imgsmall" src="static/mic.png" alt="Sample Image">
+        </button>
+    </div>
+</body>
+<script>
+    const $btn = document.querySelector("button");
+
+    let isRecording = false;
+    let mediaRecorder = null;
+
+    const audioArray = [];
+
+    $btn.onclick = async function (event) {
+        if(!isRecording){
+            const mediaStream = await navigator.mediaDevices.getUserMedia({audio: true});
+
+            mediaRecorder = new MediaRecorder(mediaStream);
+
+            mediaRecorder.ondataavailable = (event)=>{
+                audioArray.push(event.data);
+            }
+
+            mediaRecorder.onstop = (event)=>{
+
+                const blob = new Blob(audioArray, {"type": "audio/ogg codecs=opus"});
+                audioArray.splice(0);
+
+                const blobURL = window.URL.createObjectURL(blob);
+
+            }
+
+            mediaRecorder.start();
+            isRecording = true;
+
+        }else{
+
+            mediaRecorder.stop();
+            isRecording = false;
+
+            window.location.href = '/iscorrect'
+        }
+    }
+</script>
+</html>

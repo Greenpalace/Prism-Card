@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/53a8c415f1.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="static/list.css">
+</head>
+
+<body>
+    <div class="wrap">
+        <h2>파워카드를 선택하세요.</h2>
+        <table class="orangetb">
+            <tr>
+                <th>NO.</th><th>제목</th><th>스크립트</th><th></th>
+            </tr>
+            {% for data in datas %}
+            <tr>
+                <form action="/open_powercard" method="post">
+                <input type="hidden" name="situation" value={{ data[1] }}>
+                <input type="hidden" name="script" value={{ data[2] }}>
+                <td><button class="btn1" type="submit">{{ data[0] }}</button></td>
+                <td>{{ data[1] }}</td>
+                <td>{{ data[2] }}</td>
+                </form>
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+</body>
+</html>

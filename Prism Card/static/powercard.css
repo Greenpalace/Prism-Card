@@ -1,0 +1,89 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Noto Sans KR", sans-serif;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+li {
+  list-style: none;
+}
+.wrap {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  vertical-align: middle;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(to right, #ff9966 0%, #ffcc00 100%);
+  flex-direction: column;
+  padding: 30px;
+}
+
+.wrap2 {
+  width: 100%;
+  flex-direction: row;
+}
+
+.scriptwrap{
+    width: 100%;
+    flex-direction: column;
+}
+
+h2 {
+  color: #ff9966;
+  font-size: xx-large;
+}
+h3 {
+  color: black;
+  font-size: x-large;
+}
+.powercard {
+  width: 90%;
+  height: 80%;
+  background: white;
+  border-radius: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  margin-bottom: 80px;
+  padding: 30px;
+}
+
+.buttonback {
+  width: 15%;
+  height: 50px;
+  border: 0;
+  outline: none;
+  border-radius: 40px;
+  background: white;
+  color: lightgray;
+  font-size: 1.2em;
+  letter-spacing: 2px;
+  margin: 40px;
+  float: left;
+}
+.buttonback:hover{
+    transform: scale(1.15);
+}
+
+.buttonquiz {
+  width: 15%;
+  height: 50px;
+  border: 0;
+  outline: none;
+  border-radius: 40px;
+  background: white;
+  color: #ff9966;
+  font-size: 1.2em;
+  letter-spacing: 2px;
+  margin: 40px;
+  float: right;
+}
+.buttonquiz:hover{
+    transform: scale(1.15);
+}
